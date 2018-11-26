@@ -2845,19 +2845,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_RootOrder
@@ -2865,15 +2865,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.19999999
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.14999999
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1826133131657312, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
       propertyPath: m_Name
-      value: paper (1)
+      value: instructionsSheet
+      objectReference: {fileID: 0}
+    - target: {fileID: 23126475550838516, guid: 0211c4e355112b94aa610652a569dfec,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 525785aaf94fba3479cb38d32ed9cf79, type: 2}
+    - target: {fileID: 4839321117303410, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0211c4e355112b94aa610652a569dfec, type: 2}
