@@ -507,7 +507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
       propertyPath: StartWithControllers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
@@ -652,7 +652,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bb77db70d7672428294eb6fc851a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstClip: {fileID: 8300000, guid: 7bd071b5be8cb5d4e9bdc03767380b8c, type: 3}
   leftController: {fileID: 886820013}
   rightController: {fileID: 60757244}
 --- !u!114 &486868582
@@ -692,8 +691,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.855372, y: 1.2, z: 0.84000015}
-  m_Center: {x: -0.10768598, y: 0.6, z: 0.0000000064185848}
+  m_Size: {x: 2.6366453, y: 1.2, z: 0.8400001}
+  m_Center: {x: 0.0016773486, y: 0.6, z: 4.3282253e-12}
 --- !u!4 &486868586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4987744611313440, guid: 3a11ff94ec52f174e9c70b6169e87734,
@@ -2165,7 +2164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4107698930960950, guid: f3e8f70e4d2524145a4ffac975dfa1c2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.4864
+      value: 2.482
       objectReference: {fileID: 0}
     - target: {fileID: 4107698930960950, guid: f3e8f70e4d2524145a4ffac975dfa1c2, type: 2}
       propertyPath: m_LocalPosition.z
