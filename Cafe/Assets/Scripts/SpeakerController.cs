@@ -5,28 +5,58 @@ using UnityEngine;
 public class SpeakerController : MonoBehaviour {
 
     public AudioClip firstClip;
+    public OVRGrabber leftController;
+    public OVRGrabber rightController;
 
     private AudioSource musicPlayer;
+    private bool isVRGrabbed;
+    private OVRGrabbable speakerGrabbableScript;
     
 	// Use this for initialization
 	void Start () {
+        speakerGrabbableScript = GetComponent<OVRGrabbable>();
         musicPlayer = GetComponent<AudioSource>();
         musicPlayer.clip = firstClip;
         musicPlayer.loop = true;
         musicPlayer.Play();
-        //StartCoroutine(WaitForTrackTOend());
     }
 
-    /*IEnumerator WaitForTrackTOend()
+    private void Update()
     {
-        while (musicPlayer.isPlaying)
+        if (speakerGrabbableScript.isGrabbed)
         {
-
-            yield return new WaitForSeconds(0.01f);
+            interactWithSpeaker();
         }
-        musicPlayer.clip = firstClip;
-        musPlayer.loop = true;
-        MpPlayer.Play();
+    }
 
-    }*/
+    private void interactWithSpeaker()
+    {
+        if(speakerGrabbableScript.grabbedBy == leftController)
+        {
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            {
+                PlayPauseMusic();
+            }
+        }
+        else if(speakerGrabbableScript.grabbedBy == rightController)
+        {
+            if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+            {
+                PlayPauseMusic();
+            }
+        }
+         
+    }
+
+    private void PlayPauseMusic()
+    {
+        if (musicPlayer.isPlaying)
+        {
+            musicPlayer.Pause();
+        }
+        else
+        {
+            musicPlayer.Play();
+        }
+    }
 }
