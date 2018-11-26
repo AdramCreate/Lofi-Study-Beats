@@ -11,25 +11,28 @@ public class respawnScript : MonoBehaviour {
     private float originalRespawnTime;
     private bool leftPlayArea = false;
     private Rigidbody rb;
+    private OVRGrabbable grabbableScript;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         originalRespawnTime = respawnTime;
         rb = GetComponent<Rigidbody>();
-	}
+        grabbableScript = GetComponent<OVRGrabbable>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (leftPlayArea)
-        {
-            respawnTime -= Time.deltaTime;
-            if(respawnTime <= 0)
+        if(!grabbableScript.isGrabbed)
+            if (leftPlayArea)
             {
-                resetObject();
+                respawnTime -= Time.deltaTime;
+                if(respawnTime <= 0)
+                {
+                    resetObject();
+                }
             }
-        }
 	}
 
     private void OnTriggerExit(Collider other)
